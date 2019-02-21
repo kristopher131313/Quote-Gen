@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        .button {
+            position: relative;
+            background-color: #e2dfdf;
+            border: none;
+            font-size: 40px;
+            color: #333333;
+            padding: 20px;
+            width: 1000px;
+            text-align: center;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+            text-decoration: none;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .button:after {
+            content: "";
+            background: #333333;
+            display: block;
+            position: absolute;
+            padding-top: 1000%;
+            padding-left: 350%;
+            margin-left: -20px!important;
+            margin-top: -120%;
+            opacity: 0;
+            transition: all 0.8s
+        }
+        
+        .button:active:after {
+            padding: 0;
+            margin: 0;
+            opacity: 1;
+            transition: 0s
+        }
+        
+        #car {
+            transition: filter 10s ease;
+        }
+        
+        #car:hover {
+            filter: blur(20px);
+        }
+    </style>
+    <link rel="stylesheet" href="brown.css">
+    <title>PasswordGen</title>
+    <div class="cloud cloud01"></div>
+    <div class="cloud cloud02"></div>
+
+    <body background="backgroundfound.jpg" bgcolor="#333333">
+        <center> <img id="car" src="profileprotecthead.png" alt="car" style="width:800px;height:250px;" /> </center>
+    </body>
+    <br>
+    <center>
+        <p id="demo"></p>
+    </center>
+    <script>
+        document.getElementById("demo").innerHTML = Date();
+    </script>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("demo")
+            x.innerHTML = Math.floor((Math.random() * 100000000) + 2);
+        }
+    </script>
+    <br>
+    <center>
+        <h2>Random Number Password Generator</h2></center>
+    <center>
+        <br>
+        <button class="button" accesskey="" onclick="myFunction()">Generate Password</button>
+        <br>
+        <script src="js/blue.js"></script>
+        </body>
+</head>
+
+</html>
